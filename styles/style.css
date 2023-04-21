@@ -7,30 +7,91 @@
   box-sizing:border-box;  
 }
 
+@font-face {
+  font-family: spiderman ;
+  src: url(../fonts/The\ Amazing\ Spider-Man.woff2);
+}
+
+@font-face {
+  font-family: panel ;
+  src: url(../fonts/Comic\ Panels.woff2);
+}
+
 body {
-  margin-left: 40vw;
+  position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+width: 100vw;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+
+}
+
+button {
+  width: 15vw;
+  height: 8em;
+  background-color: yellow; 
+  box-shadow: 2px 2px black;
+  border: solid 2px black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-family: panel;
+  font-size: 16px;
+  z-index: 99999;
+  transition: 1s;
+}
+
+button:hover {
+  background-color: red;
+}
+
+h1 {
+  color: white;
+  font-family: spiderman;
+  text-align: center;
+  font-size: 5em;
+  margin: 0;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 6px 6px 0px red;  
 }
 
 article {
   border: 2px solid black;
-  background-color: aqua;
-  height: 700px;
-  width: 400px;
+  background-color: white;
+  height: 590px;
+  width: 350px;
   display: flex;
   flex-wrap: wrap;
   transition: 1s;
+  padding: 0.3em;
+  filter: drop-shadow(3px 3px 3px rgb(0 0 0));
 }
 
 article:nth-of-type(1) {
   position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   background-image: url(../images/clean.jpg);
   background-size: cover;
+  z-index: 999;
 }
 
 
 .transform {
   background-color: #45CEE0;
-  transform: translateX(-25em) scaleX(-1);
+
+  transform: translateX(-22em) scaleX(-1) ;
 
   opacity: 0%;
 }
@@ -44,19 +105,26 @@ section{
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis:40%;
-  transition: 0.1s;
-  border: 2px solid black;
-  background-size:contain;
+  transition: 1s;
+  border: 5px solid white;
+  box-shadow: inset 0px 0px 0px 3px black;
+  
+  background-size:cover;
   background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(1);
 }
 
-section:hover {
-  flex-basis: 60%;
+.hover {
+  flex-basis: 56%;
   background-size: cover;
+  filter: grayscale(0);
+
 }
 
 section:nth-of-type(1){
   background-image: url(../images/panel1.png);
+  
 }
 
 section:nth-of-type(2){
@@ -96,9 +164,6 @@ button:not([disabled]) {
 /* ALGEMENE STYLING */
 /********************/
 
-h1 {
-  color:var(--color-headings);
-}
 
 
 /* ... */
