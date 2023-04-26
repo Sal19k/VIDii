@@ -28,7 +28,6 @@ body {
   position: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../images/achtergrond.png);
 }
 
 main {
@@ -37,6 +36,7 @@ display: flex;
 justify-content: space-evenly;
 align-items: center;
 gap: 10px 10px 10px 10px;
+height: 90em;
 }
 
 button {
@@ -63,66 +63,77 @@ h1 {
   color: white;
   font-family: spiderman;
   text-align: center;
-  font-size: 5em;
-  margin: 0;
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
+  font-size: 6em;
+  margin: 0.5em auto 0 auto;
+  text-align: center;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
   text-shadow: 6px 6px 0px red;  
 }
 
-article {
+a {
+  position: absolute;
+  text-decoration: none;
+  font-family: panel;
+  font-size: 1em;
+  background-color: white;
+
+  border: solid 2px black;
+  padding: 10px;
+  box-shadow: 2px 2px black;
+  opacity: 0;
+}
+
+a:nth-of-type(1) {
+  margin-top: 25%;
+  left: 45%;
+}
+
+a:nth-of-type(2) {
+  margin-top: 60%;
+  right: 70%;
+}
+
+ol {
+	position:relative;
+	
+	width:80vmin;
+	aspect-ratio:8/6;
+/* 	background-color:gold; */
+	
+	margin:0;
+	padding:0;
+	list-style:none;
+	
+	perspective:160vmin;
+	transform-style:preserve-3d;
+}
+
+li {
+	position:absolute;
+	width:50%;
+	height:100%;
+	top:0;
+	right:0;
+	transform-origin:left;
+	transition:1s;
+	transform-style:preserve-3d;
+}
+
+li > section {
+	position: absolute;
+  inset: 0;
+
   border: 2px solid black;
   background-color: white;
-  height: 590px;
-  width: 370px;
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   transition: 1s;
   padding: 0.3em;
   filter: drop-shadow(3px 3px 3px rgb(0 0 0));
-}
-
-.papier{
-  position: absolute;
-  margin-left:46.5em;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  background-image: url(../images/clean.jpg);
-  background-size: cover;
-  z-index: 999;
-}
-
-
-.transform {
-  background-color: #45CEE0;
-  transform: translateX(-22em) scaleX(-1) ;
-  opacity: 0%;
-}
-
-section:nth-of-type(1) {
-  display: flex;
-  flex-direction: row;
-}
-
-section section{
-  width: 25%;
-  height: 50%;
-  background-color: white;
-
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis:40%;
-  transition: 1s;
-  border: 5px solid white;
-  box-shadow: inset 0px 0px 0px 3px black;
-  
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: grayscale(1);
+  backface-visibility: hidden;
+  pointer-events: none;
 }
 
 .hover {
@@ -131,42 +142,96 @@ section section{
   filter: grayscale(0);
 }
 
-section section:nth-of-type(1){
-  background-image: url(../images/panel1.png);
+section section {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 40%;
+  transition: 1s;
+  border: 5px solid white;
+  box-shadow: inset 0px 0px 0px 3px black;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(1);
 }
 
-section section:nth-of-type(2){
-  background-image: url(../images/panel2.png);
+
+li:nth-of-type(1) > section:nth-of-type(1)  {
+  background-image: url(../images/cover.png);
+  background-size: cover;
 }
 
-section section:nth-of-type(3){
-  background-image: url(../images/panel3.png);
-}
-
-section section:nth-of-type(4){
+li section:nth-of-type(2) section:nth-of-type(1) {
   background-image: url(../images/panel4.png);
 }
 
+li section:nth-of-type(2) section:nth-of-type(2){
+  background-image: url(../images/panel3.png);
+}
+li section:nth-of-type(2) section:nth-of-type(3){
+  background-image: url(../images/panel1.png);
+}
 
-
-.weg {
-  visibility: hidden;
+li section:nth-of-type(2) section:nth-of-type(4){
+  background-image: url(../images/panel2.png);
 }
 
 
+li:nth-of-type(1) {
+	transform:rotateY(-4deg);
+}
+li:nth-of-type(2) {
+	transform:rotateY(-3deg);
+}
+li:nth-of-type(3) {
+	transform:rotateY(-2deg);
+}
+li:nth-of-type(4) {
+	transform:rotateY(-1deg);
+}
 
+li:nth-of-type(1).omgeslagen {
+	transform:rotateY(-179deg);
+}
+li:nth-of-type(2).omgeslagen {
+	transform:rotateY(-178deg);
+}
+li:nth-of-type(3).omgeslagen {
+	transform:rotateY(-177deg);
+}
+li:nth-of-type(4).omgeslagen  {
+	transform:rotateY(-176deg);
+}
 
+li section:nth-of-type(1) {
+	background-color:white;
+}
 
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-
-:root {
-  --color-headings:crimson
+li > section:nth-of-type(2) {
+	background-color:white;
+	transform:rotateY(180deg);
 }
 
 
+img {
+  position: absolute;
+  z-index: 9999;
+  top: 42%;
+  left: 48%;
+  height: 55%;
+  width: auto;
+  opacity: 0;
+}
 
+.show {
+  opacity: 1;
+}
 
 
 /********************/

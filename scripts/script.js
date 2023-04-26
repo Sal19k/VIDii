@@ -2,12 +2,31 @@ console.log("Howdy!");
 
 const next = document.getElementById("next");
 const back = document.getElementById("back");
-const papier = document.querySelector(".papier");
-const pagina1 = document.querySelector("section article:nth-of-type(1)")
-const pagina2 = document.querySelector("section article:nth-of-type(2)")
-const panels = document.querySelectorAll("section section")
+
+const spiderman = document.querySelector("img");
+const tekst = document.querySelectorAll("a");
+
+const panels = document.querySelectorAll("li section section")
+
+
 
 let currentPanelIndex = -1;
+
+var lis = document.querySelectorAll("li");
+
+lis.forEach(li => {
+	li.addEventListener("click", omslaan);
+    
+
+});
+
+function omslaan(event) {
+	var dePagina = event.target;
+    console.log("Howdy!");
+	
+	dePagina.classList.toggle("omgeslagen");
+}
+
 
 
 next.addEventListener("click", () => {
@@ -16,8 +35,8 @@ next.addEventListener("click", () => {
         panels[currentPanelIndex].classList.remove("hover");
     }
     console.log("currentPanelIndex =", currentPanelIndex);
-    pagina1.classList.remove("weg");
-    papier.classList.add("transform");
+    spiderman.classList.add("show");
+    tekst[0].classList.add("show");
 
     // Increment the index and use the modulo operator to cycle through the panels
     currentPanelIndex = (currentPanelIndex + 1) % panels.length;
@@ -25,10 +44,10 @@ next.addEventListener("click", () => {
     // Add the 'hover' class to the new current panel
     panels[currentPanelIndex].classList.add("hover");
 
-    if (currentPanelIndex === 8) {
-        pagina1.classList.add("weg");
-        pagina2.classList.add("transform");
-    }
+    // Add delay for the second 'a' element
+    setTimeout(() => {
+        tekst[1].classList.add("show");
+    }, 1000); // 1000ms delay (1 second)
 });
 
 back.addEventListener("click", () => {
@@ -40,8 +59,7 @@ back.addEventListener("click", () => {
     panels[currentPanelIndex].classList.add("hover");   
 
     if (currentPanelIndex === 7) {
-        pagina1.classList.add("weg");
-        papier.classList.remove("transform");
         panels[currentPanelIndex].classList.remove("hover");
+        
     }
 });
