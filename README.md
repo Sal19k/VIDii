@@ -12,10 +12,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 ### Ontwerper:
-Sanne 't Hooft (vervangen door jouw naam)
+Salentino Bommel
 
 #### Je startniveau:
-Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
+rood
 
 
 
@@ -26,15 +26,14 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
+  <img src="../readme-images/schets.png" width="375px" alt="eerste versie/schets">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Flex
+  - Layout
+  - Interactie
  
 </details>
 
@@ -47,23 +46,21 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
 
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  <img src="../readme-images/readme1.png" width="375px" alt="eerste versie/schets">
+   Flex werkte niet echt doordat panels uit beeld gingen
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+    bereken hoeveel ruimte ze beide nodig haden en niet boven 100 komen
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Boek omslaan 
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
+  Uiteindelijk opgelost met een opacity die op 1 axis spiegelt
 
   ### Bevinding 3:
-  ...
+  <img src="../readme-images/feedback1.png" width="375px" alt="feedback1">
 
 </details>
 
@@ -76,23 +73,22 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
   
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Boek omslaan kan op een betere manier
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Code van Sanne gebruikt om dubbelzijdig papier te maken
 
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
+  Boek omslaan op basis van klik op knop
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  Functies overzetten in click script.
 
 
   ### Bevinding 3:
-  ...
+  <img src="../readme-images/feedback2.png" width="375px" alt="feedback2">
+   <img src="../readme-images/feedback3.png" width="375px" alt="feedback3">
 
 </details>
 
@@ -102,26 +98,14 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 ## Voortgang/Feedback 3
 
 <details>
-  <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
-  
-  ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
-  #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
-  #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
+ 
   ### Bevinding 3:
-  ...
+  Alex feedback
+  A veranderen in Ps
+  Comments toevoegen per onderdeel
+  Achtefrond toevoegen en minder druk
+  Texture comic
+  Pointer to spiderman  
 
 </details>
 
@@ -134,19 +118,12 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
+  <img src="readme-images/eind.png" width="375px" alt="final ontwerp">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
-
-  ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Ik heb geleerd om goed op te letten welke code andere code beinvloeden en daarbij de juiste javascript toe te passen. 
+  Naast de code is het coderen ook best goed gegaan omdat je meerdere studenten naast je hebt die kunnen helpen of met nieuwe ideeen kunnen komen.
 </details>
 
 
@@ -159,8 +136,9 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
-
+1. https://www.google.com/url?sa=i&url=https%3A%2F%2Fbeyondamazingexhibition.com%2F&psig=AOvVaw0yo4bCbndOWaMY0LSOfI4W&ust=1683641356382000&source=images&cd=vfe&ved=0CAQQjB1qFwoTCLDeyPny5f4CFQAAAAAdAAAAABAI
+2. https://www.theblotsays.com/2019/10/spider-man-into-spider-verse-timed.html
+3. https://www.tcj.com/a-holy-grail-in-the-library-of-congress-visiting-steve-ditkos-amazing-fantasy-15-original-artwork/
+4. https://www.marvel.com/articles/comics/margaret-stohl-on-the-gritty-group-jam-behind-spider-man-noir-1
+5. https://www.chasingamazingblog.com/2015/03/02/review-spider-gwen-1-and-the-first-step-of-hopefully-many/
 </details>

@@ -1,15 +1,10 @@
-/*************/
-/* CSS RESET */
-/*************/
+/*ROOT*/
 
 :root {
   --comicgeel: #FFE900;
   --white: #ffffff;
 }
 
-
-
-/* naar een idee van Jen Simmons */
 *, *::after, *::before {
   box-sizing:border-box;  
 }
@@ -24,45 +19,62 @@
   src: url(../fonts/Comic\ Panels.woff2);
 }
 
+/*GENERAL*/
+
 body {
-  position: fixed;
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
+  background-image: url(../images/background.png);
+}
+
+.roze {
+  background-image: url(../images/background2.png);
+}
+
+.gray {
+  background-image: url(../images/background3.png);
+}
+
+.black {
+  background-image: url(../images/background4.png);
 }
 
 main {
-width: 100vw;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-gap: 10px 10px 10px 10px;
-height: 100em;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 button {
   width: 15vw;
   height: 8em;
+
   background-color: var(--comicgeel); 
   box-shadow: 2px 2px black;
   border: solid 2px black;
   color: black;
-  padding: 15px 32px;
+  padding: 3% 5%;
   text-align: center;
   text-decoration: none;
   font-family: panel;
-  font-size: 16px;
+  font-size: 100%;
   z-index: 99999;
 }
 
 button:hover {
   background-color: red;
+  cursor: url(../images/86489.png), auto;
 }
 
 h1 {
+  width: 100vw;
   color: white;
   font-family: spiderman;
   text-align: center;
-  font-size: 6em;
+  font-size: 400%;
   margin: 0.5em auto 0 auto;
   text-align: center;
   -webkit-text-stroke-width: 0.5px;
@@ -70,16 +82,33 @@ h1 {
   text-shadow: 6px 6px 0px red;  
 }
 
-a {
+h2 {
+  position: absolute;
+  width: 100vw;
+  color: white;
+  font-family: spiderman;
+  text-align: center;
+  font-size: 400%;
+  margin: 0.5em auto 0 auto;
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 6px 6px 0px red;  
+  z-index: 1;
+}
+
+p {
+  margin: 5%;
+  padding: 5%;
+
   position: absolute;
   text-decoration: none;
   font-family: panel;
-  font-size: 1em;
+  font-size: 0.5em;
   background-color: white;
   z-index: 99999;
 
   border: solid 2px black;
-  padding: 10px;
   box-shadow: 2px 2px black;
   opacity: 0;
 }
@@ -87,7 +116,6 @@ a {
 
 ol {
 	position:relative;
-	
 	width:100vmin;
 	aspect-ratio:8/6;
 /* 	background-color:gold; */
@@ -111,6 +139,17 @@ li {
 	transform-style:preserve-3d;
 }
 
+img {
+  position: absolute;
+  top: 42%;
+  left: 48%;
+  height: 55%;
+  width: auto;  
+  z-index: -1;
+}
+
+/*PANELS*/
+
 li > section {
 	position: absolute;
   inset: 0;
@@ -124,7 +163,6 @@ li > section {
   padding: 0.6em;
   filter: drop-shadow(3px 3px 3px rgb(0 0 0));
   backface-visibility: hidden;
-  pointer-events: none;
 }
 
 .hover {
@@ -143,8 +181,8 @@ section section {
   flex-shrink: 1;
   flex-basis: 40%;
   transition: 1s;
-  border: 10px solid white;
-  box-shadow: inset 0px 0px 0px 3px black;
+  border: 5px solid white;
+  box-shadow: inset 0px 0px 0px 2px black;
   z-index: 9999;
 
   background-size: cover;
@@ -153,40 +191,92 @@ section section {
   filter: grayscale(1);
 }
 
-a:nth-of-type(1) {
+/*TEKSTVAKJES*/
+
+li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(1) p:nth-of-type(1) {
   margin-top: 25%;
-  right: 5%;
   left: 45%;
 }
 
-a:nth-of-type(2) {
+li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(1) p:nth-of-type(2) {
   margin-top: 60%;
   right: 60%;
-  left: 5%;
 }
 
-a:nth-of-type(3) {
-  right: 5%;
-  left: 45%;
+li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(1) p:nth-of-type(3) {
   margin-top: 100%;
+  left: 45%;
 }
 
-section:nth-of-type(2) section:nth-of-type(2) a {
+li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(2) p:nth-of-type(1) {
+  margin-top: 50%;
+  right: 20%;
+}
+
+li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(3) p:nth-of-type(1) {
+  margin-top: 85%;
+  right: 45%;
+}
+
+li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(4) p:nth-of-type(1) {
+  margin-top: 80%;
+  left: 45%;
+}
+
+li:nth-of-type(2) section:nth-of-type(1) section:nth-of-type(1) p:nth-of-type(1) {
+  margin-top: 50%;
+  right: 45%;
+}
+
+li:nth-of-type(2) section:nth-of-type(1) section:nth-of-type(1) p:nth-of-type(2) {
+  margin-top: 95%;
+  left: 20%;
+}
+
+li:nth-of-type(2) section:nth-of-type(1) section:nth-of-type(2) p:nth-of-type(1) {
+  margin-top: 60%;
+  right: 20%;
+}
+
+li:nth-of-type(2) section:nth-of-type(1) section:nth-of-type(2) p:nth-of-type(2) {
+  margin-top: 90%;
+  left: 20%;
+}
+
+li:nth-of-type(3) section:nth-of-type(1) section:nth-of-type(1) p:nth-of-type(1){
+  margin-top: 70%;
+  right: 40%;
+}
+
+li:nth-of-type(3) section:nth-of-type(1) section:nth-of-type(1) p:nth-of-type(2){
+  margin-top: 100%;
+  left: 40%;
+}
+
+li:nth-of-type(3) section:nth-of-type(1) section:nth-of-type(2) p:nth-of-type(1){
   margin-top: 5%;
-  right: 50%;
-  left: 5%;
+  right: 40%;
 }
 
-section:nth-of-type(2) section:nth-of-type(3) a {
-  margin-top: 5%;
-  right: 50%;
-  left: 5%;
+li:nth-of-type(3) section:nth-of-type(1) section:nth-of-type(2) p:nth-of-type(2){
+  margin-top: 95%;
+  right: 20%;
 }
 
+li:nth-of-type(3) section:nth-of-type(1) section:nth-of-type(3) p:nth-of-type(1) {
+  margin-top: 95%;
+  right: 50%;
+}
 
+/*COVER*/
 
-li:nth-of-type(1) > section:nth-of-type(1)  {
+ol > li:nth-of-type(1)  section:nth-of-type(1)  {
   background-image: url(../images/cover.png);
+  background-size: cover;
+}
+
+ol > li:nth-of-type(3)  section:nth-of-type(2)  {
+  background-image: url(../images/backcover.png);
   background-size: cover;
 }
 
@@ -194,11 +284,7 @@ li:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1){
   visibility: hidden;
 }
 
-
-li > section:nth-of-type(1)  {
-  background-image: url(../images/cover.png);
-  background-size: contain;
-}
+/*PANEL AFBEELDINGEN*/
 
 li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(1) {
   background-image: url(../images/panel4.png);
@@ -209,13 +295,61 @@ li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(2){
   background-position: 0em 0em;
 }
 li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(3){
-  background-image: url(../images/panel1.png);
-}
-
-li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(4){
   background-image: url(../images/panel2.png);
 }
 
+li:nth-of-type(1) section:nth-of-type(2) section:nth-of-type(4){
+  background-image: url(../images/panel1.png);
+}
+
+li:nth-of-type(2) section:nth-of-type(1) section:nth-of-type(1) {
+  background-image: url(../images/panel5.png);
+}
+
+li:nth-of-type(2) section:nth-of-type(1) section:nth-of-type(2){
+  background-image: url(../images/panel6.png);
+}
+li:nth-of-type(2) section:nth-of-type(1) section:nth-of-type(3){
+  background-image: url(../images/panel7.png);
+}
+
+li:nth-of-type(2) section:nth-of-type(1) section:nth-of-type(4){
+  background-image: url(../images/panel8.png);
+}
+
+li:nth-of-type(2) section:nth-of-type(2) section:nth-of-type(1) {
+  background-image: url(../images/panel10.png);
+}
+
+li:nth-of-type(2) section:nth-of-type(2) section:nth-of-type(2){
+  background-image: url(../images/panel11.png);
+}
+
+li:nth-of-type(2) section:nth-of-type(2) section:nth-of-type(3){
+  background-image: url(../images/panel12.png);
+}
+
+li:nth-of-type(2) section:nth-of-type(2) section:nth-of-type(4){
+  background-image: url(../images/panel13.png);
+}
+
+li:nth-of-type(3) section:nth-of-type(1) section:nth-of-type(1) {
+  background-image: url(../images/panel14.png);
+}
+
+li:nth-of-type(3) section:nth-of-type(1) section:nth-of-type(2){
+  background-image: url(../images/panel15.png);
+}
+
+li:nth-of-type(3) section:nth-of-type(1) section:nth-of-type(3){
+  background-image: url(../images/panel17.png);
+}
+
+li:nth-of-type(3) section:nth-of-type(1) section:nth-of-type(4){
+  background-image: url(../images/panel16.png);
+}
+
+/*PAPIER OMSLAAN*/
 
 li:nth-of-type(1) {
 	transform:rotateY(-4deg);
@@ -252,28 +386,31 @@ li > section:nth-of-type(2) {
 	transform:rotateY(180deg);
 }
 
-
-img {
-  position: absolute;
-  top: 42%;
-  left: 48%;
-  height: 55%;
-  width: auto;
-  opacity: 0;
-  z-index: -1;
-}
-
 .show {
   opacity: 1;
 }
 
+/*CUSTOM TEKSTVAKJES*/
 
-/********************/
-/* ALGEMENE STYLING */
-/********************/
+#p1 {
+  background-color: red;
+}
 
+#p2 {
+  background-color: gray;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7em;
+  font-weight: bold;
+}
 
+#p3 {
+  background-color: black;
+  color: var(--comicgeel);
+}
 
-/* ... */
+#p4 {
+  background-color: white;
+  color: #ff0065;
+}
 
 
